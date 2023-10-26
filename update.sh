@@ -13,7 +13,7 @@ STARTUP_FLAGS="-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200
 display_motd() {
   echo -e "\033c"
   printf "==========================================================================\n"
-  figlet -l $HOST_NAME
+  figlet -l Nexlarhost 
   printf "==========================================================================\n"
 }
 
