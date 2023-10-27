@@ -140,8 +140,8 @@ version_paper() {
 }
 
 install_paper() {
-  case $1 in
-  8)
+  case $install_paper in
+  1)
     # Paper 1.8.8
     curl -o server.jar $PAPER_1_8_8
     ;;
@@ -158,28 +158,7 @@ install_paper() {
     curl -o server.jar $PAPER_1_19_4
     ;;
   esac
-  agree_eula
   exit
-}
-
-select_server() {
-  echo "Which platform are you gonna use?"
-  select type in Minecraft Discord NodeJS; do
-    case $type in
-    "Minecraft")
-      install_mc
-      ;;
-    "Discord" | "NodeJS")
-      echo "Unsupported at the moment."
-      exit
-      ;;
-    *)
-      echo "Invalid server type."
-      exit
-      break
-      ;;
-    esac
-  done
 }
 
 launch_server() {
