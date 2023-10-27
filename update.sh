@@ -42,7 +42,7 @@ software() {
       version_paper
       ;;
     *)
-      echo "Invalid server version."
+      echo "Invalid server software."
       exit 1
       ;;
     esac
@@ -53,17 +53,83 @@ version_paper() {
   echo "Which Minecraft version you want to install?"
   select version in 1.8.8 1.9.4 1.10.2 1.11.2 1.12.2 1.13.2 1.14.4 1.15.2 1.16.1 1.16.2 1.16.3 1.16.4 1.16.5 1.17 1.17.1 1.18 1.18.1 1.18.2 1.19 1.19.1 1.19.2 1.19.3 1.19.4 1.20 1.20.1 1.20.2; do
     case $version_paper in
-    "1.8")
+    "1.8.8")
+      install_paper 1
+      ;;
+    "1.9.4")
+      install_paper 2
+      ;;
+    "1.10.2")
+      install_paper 3
+      ;;
+    "1.11.2")
+      install_paper 4
+      ;;
+    "1.12.2")
+      install_paper 5
+      ;;
+    "1.13.2")
+      install_paper 6
+      ;;
+    "1.14.4")
+      install_paper 7
+      ;;
+    "1.15.2")
       install_paper 8
       ;;
-    "1.12")
+    "1.16.1")
+      install_paper 9
+      ;;
+    "1.16.2")
+      install_paper 10
+      ;;
+    "1.16.3")
       install_paper 11
       ;;
+    "1.16.4")
+      install_paper 12
+      ;;
     "1.16.5")
+      install_paper 13
+      ;;
+    "1.17")
+      install_paper 14
+      ;;
+    "1.17.1")
+      install_paper 15
+      ;;
+    "1.18")
       install_paper 16
       ;;
-    "1.19.4")
+    "1.18.1")
       install_paper 17
+      ;;
+    "1.18.2")
+      install_paper 18
+      ;;
+    "1.19")
+      install_paper 19
+      ;;
+    "1.19.1")
+      install_paper 20
+      ;;
+    "1.19.2")
+      install_paper 21
+      ;;
+    "1.19.3")
+      install_paper 22
+      ;;
+    "1.19.4")
+      install_paper 23
+      ;;
+    "1.20")
+      install_paper 24
+      ;;
+    "1.20.1")
+      install_paper 25
+      ;;
+    "1.20.2")
+      install_paper 26
       ;;
     *)
       echo "Invalid server version."
