@@ -34,25 +34,25 @@ display_motd() {
   figlet -l Nexlarhost 
   printf "==========================================================================\n"
 }
-
-agree_eula() {
-  echo "Do you agree to the Minecraft EULA?"
-  select yn in "Yes" "No"; do
-    case $yn in
-    Yes)
-      echo "eula=true" >eula.txt
+software() {
+  echo "Which Minecraft egg you want to install?"
+  select software in Paper; do
+    case $software in
+    "Paper")
+      version_paper
+      ;;
+    *)
+      echo "Invalid server version."
       exit 1
       ;;
-    No) exit ;;
-    *) exit ;;
     esac
   done
 }
 
-install_mc() {
-  echo "Which version of Minecraft?"
-  select version in 1.8 1.12 1.16.5 1.19.4; do
-    case $version in
+version_paper() {
+  echo "Which Minecraft version you want to install?"
+  select version in 1.8.8 1.9.4 1.10.2 1.11.2 1.12.2 1.13.2 1.14.4 1.15.2 1.16.1 1.16.2 1.16.3 1.16.4 1.16.5 1.17 1.17.1 1.18 1.18.1 1.18.2 1.19 1.19.1 1.19.2 1.19.3 1.19.4 1.20 1.20.1 1.20.2; do
+    case $version_paper in
     "1.8")
       install_paper 8
       ;;
